@@ -34,6 +34,8 @@ jobs:
         uses: actions/configure-pages@v2
       - name: Update data file
         run: sed -i 's@<p id="myname"></p>@<p id="myname">${{ secrets.NAME }}</p>@g' index.html
+      - name: tmp
+        run: cat index.html
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
