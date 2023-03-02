@@ -33,7 +33,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Update data file
-        run: sed -i 's@<p id="myname"></p>@<p id="myname">${{ secrets.NAME }}</p>@g' index.html
+        run: sed -i 's@<p id="myname"></p>@<p id="myname">hm-hm-hm</p>@g' index.html
       - name: tmp
         run: cat index.html
         
